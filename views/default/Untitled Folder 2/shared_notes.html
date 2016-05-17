@@ -1,0 +1,24 @@
+{{extend 'layout.html'}}
+
+<table class="table">
+  <tr>
+    <th>Title</th>
+    <th>Labels</th>
+    <th>Created On</th>
+    <th>Created By</th>
+  </tr>
+  {{for row in rows:}}
+  {{nt = db.note(row.note_id)}}
+  <tr>
+    <td>{{=nt.title}}</td>
+    <td>
+      {{labels = db(db.label.note_id == nt.id).select()}}
+      {{for tag in labels:}}
+      <span>{{=tag.name}}</span>
+      {{pass}}
+    </td>
+    <td>{{=nt.created_on}}</td>
+    <td>{{=nt.created_by.first_name}} {{=nt.created_by.last_name}}</td>
+  </tr>
+  {{pass}}
+</table>

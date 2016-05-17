@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+<link rel="stylesheet" href="{{=URL('static', 'css2/fonts.css')}}"/>
+<link rel="stylesheet" href="{{=URL('static', 'css2/default.css')}}"/>
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+        	<span class="icon icon-cog"></span>
+			<h1><a href="#">Add Note</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="active"><a href=""{{=URL('default', 'my_notes')}}"" accesskey="1" title="">My Notes</a></li>
+				<li><a href="{{=URL('default', 'shared_notes')}}" accesskey="2" title="">Shared Notes</a></li>
+				<li><a href="user/register" accesskey="3" title="">Account Details</a></li>
+				<li><a href="#" accesskey="4" title="">Add Note</a></li>
+				<li><a href="http://127.0.0.1:8000/NotesKeeper3/default/user/logout?_next=/NotesKeeper3/default/index" accesskey="5" title="">Log Out</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrapper">
+	<div id="banner" class="container"><img src="{{=URL('static', 'images2/banner.jpg')}}" width="1200" height="500" alt="" /></div>
+	<div id="welcome" class="container">
+    	
+<div class="title">
+	  <h2>Create your note</h2>
+		</div>
+		{{=form_note}}
+	</div>
+</div>
+<div id="copyright">
+	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by Anubhab Sen.</p>
+	<ul class="contact">
+		<li><a href="https://twitter.com/itsanubhabsen" class="icon icon-twitter"><span>Twitter</span></a></li>
+		<li><a href="https://facebook.com/sen.anubhab" class="icon icon-facebook"><span></span></a></li>
+		<li><a href="https://github.com/anubhabsen" class="icon icon-github"><span>GitHub</span></a></li>
+	</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{{extend 'layout.html'}}
+
+<table class="table">
+  <tr>
+    <th>Title</th>
+    <th>Labels</th>
+    <th>Created On</th>
+    <th>Edit</th>
+    <th>Attach Label</th>
+    <th>Share Note</th>
+  </tr>
+  {{for nt in notes:}}
+  <tr>
+    <td>{{=nt.title}}</td>
+    <td>
+      {{labels = db(db.label.note_id == nt.id).select()}}
+      {{for tag in labels:}}
+      <span>{{=tag.name}}</span>
+      {{pass}}
+    </td>
+    <td>{{=nt.created_on}}</td>
+    <td> <a href="{{=URL('edit_note', args = nt.id)}}">
+      <button type="button" name="edit_note"> Edit </button>
+    </a> </td>
+    <td> <a href="{{=URL('attach_label', args = nt.id)}}">
+      <button type="button" name="attach_label"> Attach </button>
+    </a> </td>
+    <td> <a href="{{=URL('share_note', args = nt.id)}}">
+      <button type="button" name="share_note"> Share </button>
+    </a> </td>
+  </tr>
+  {{pass}}
+</table>

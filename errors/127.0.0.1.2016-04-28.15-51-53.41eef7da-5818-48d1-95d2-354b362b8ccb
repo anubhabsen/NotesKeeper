@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S'missing "pass" in view'
+p3
+sS'layer'
+p4
+S'ParserContainer'
+p5
+sS'code'
+p6
+S'response.write(\'<!DOCTYPE HTML>\\r\\n<html>\\r\\n\\t<head>\\r\\n\\t\\t<title>My Notes</title>\\r\\n\\t\\t<meta http-equiv="content-type" content="text/html; charset=utf-8" />\\r\\n\\t\\t<meta name="description" content="" />\\r\\n\\t\\t<meta name="keywords" content="" />\\r\\n\\t\\t<script src="js/jquery.min.js"></script>\\r\\n\\t\\t<script src="js/jquery.dropotron.min.js"></script>\\r\\n\\t\\t<script src="js/skel.min.js"></script>\\r\\n\\t\\t<script src="js/skel-layers.min.js"></script>\\r\\n\\t\\t<script src="js/init.js"></script>\\r\\n\\t\\t<noscript>\\r\\n\\t\\t\\t<link rel="stylesheet" href="css/skel.css" />\\r\\n\\t\\t\\t<link rel="stylesheet" href="css/style.css" />\\r\\n\\t\\t\\t<link rel="stylesheet" href="css/style-wide.css" />\\r\\n\\t\\t</noscript>\\r\\n\\t</head>\\r\\n\\t<body>\\r\\n\\t\\t\\t<div class="wrapper style1">\\r\\n\\t\\t\\t\\t\\t<div id="header" class="skel-panels-fixed">\\r\\n\\t\\t\\t\\t\\t\\t<div id="logo">\\r\\n\\t\\t\\t\\t\\t\\t\\t<h1><a href="index.html">My Notes</a></h1>\\r\\n\\t\\t\\t\\t\\t\\t\\t<span class="tag">by NotesKeeper</span>\\r\\n\\t\\t\\t\\t\\t\\t</div>\\r\\n\\t\\t\\t\\t\\t\\t<nav id="nav">\\r\\n\\t\\t\\t\\t\\t\\t\\t<ul>\\r\\n\\t\\t\\t\\t\\t\\t\\t\\t<li class="active"><a href="index.html">Homepage</a></li>\\r\\n\\t\\t\\t\\t\\t\\t\\t\\t<li><a href="#">IDK</a></li>\\r\\n\\t\\t\\t\\t\\t\\t\\t\\t<li><a href="#">IDK</a></li>\\r\\n\\t\\t\\t\\t\\t\\t\\t\\t<li><a href="#">IDK</a></li>\\r\\n\\t\\t\\t\\t\\t\\t\\t</ul>\\r\\n\\t\\t\\t\\t\\t\\t</nav>\\r\\n\\t\\t\\t\\t\\t</div>\\r\\n\\t\\t\\t\\t\\t<div id="banner" class="container">\\r\\n\\t\\t\\t\\t\\t\\t<section>\\r\\n\\t\\t\\t\\t\\t\\t\\t<p>This is <strong>My Notes</strong>, section. More text needed.</p>\\r\\n\\t\\t\\t\\t\\t\\t</section>\\r\\n\\t\\t\\t\\t\\t</div>\\r\\n\\t\\t\\t\\t\\t<div id="extra">\\r\\n\\t\\t\\t\\t\\t\\t<div class="container">\\r\\n\\t\\t\\t\\t\\t\\t\\t<div class="row no-collapse-1">\\r\\n\\t\\t\\t\\t\\t\\t\\t\\t\', escape=False)\nfor nt in notes:\n    response.write(\'\\r\\n\\t\\t\\t\\t\\t\\t\\t\\t<section class="4u"> <a href="#" class="image featured"><img src="images/pic0\', escape=False)\n    ++i\n    response.write(\'.jpg" alt=""></a>\\r\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t<div class="box">\\r\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t<p>nt.title</p>\\r\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t<a href="\', escape=False)\n    response.write(URL(\'show_note\', args = nt.id))\n    response.write(\'" class="button">Read More</a> </div>\\r\\n\\t\\t\\t\\t\\t\\t\\t\\t</section>\\r\\n\\t\\t\\t\\t\\t\\t\\t</div>\\r\\n\\t\\t\\t\\t\\t\\t</div>\\r\\n\\t\\t\\t\\t\\t</div>\\r\\n\\t\\t\\t\\t</div>\\r\\n\\t\\t<div id="copyright">\\r\\n\\t\\t\\t<div class="container">\\r\\n\\t\\t\\t\\t<div class="copyright">\\r\\n\\t\\t\\t\\t\\t<p>Design: <a href="#">NotesKeeper</a> </p>\\r\\n\\t\\t\\t\\t\\t<ul class="icons">\\r\\n\\t\\t\\t\\t\\t\\t<li><a href="#" class="fa fa-facebook"><span>Facebook</span></a></li>\\r\\n\\t\\t\\t\\t\\t\\t<li><a href="#" class="fa fa-twitter"><span>Twitter</span></a></li>\\r\\n\\t\\t\\t\\t\\t\\t<li><a href="#" class="fa fa-google-plus"><span>Google+</span></a></li>\\r\\n\\t\\t\\t\\t\\t</ul>\\r\\n\\t\\t\\t\\t</div>\\r\\n\\t\\t\\t</div>\\r\\n\\t\\t</div>\\r\\n\\r\\n\\t</body>\\r\\n</html>\\r\\n\', escape=False)'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'None\n'
+p11
+s.

@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Something big</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href="http://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet" type="text/css">
+		<link rel="stylesheet prefetch" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="{{=URL('static','css/bootstrap.min.css')}}"/>
+		<link rel="stylesheet" href="{{=URL('static','css/web2py-bootstrap3.css')}}"/>
+		<link rel="shortcut icon" href="{{=URL('static','images/favicon.ico')}}" type="image/x-icon">
+		<link rel="apple-touch-icon" href="{{=URL('static','images/favicon.png')}}">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js1/skel.min.js"></script>
+		<script src="js1/skel-panels.min.js"></script>
+		<script src="js1/init.js"></script>
+		<link rel="stylesheet" href="{{=URL('static', 'css1/skel-noscript.css')}}" />
+		<link rel="stylesheet" href="{{=URL('static', 'css1/style.css')}}" />
+		<link rel="stylesheet" href="{{=URL('static', 'css1/style-desktop.css')}}" />
+
+	</head>
+	<body class="homepage">
+		<div id="header">
+			<div class="container">
+				<div id="logo">
+					<h1><a href="#">Shared Notes</a></h1>
+					<span>Those who care enough to share</span>
+				</div>
+				<nav id="nav">
+					<ul>
+						<li><a href="my_notes.html">Homepage</a></li>
+						<li class="active"><a href="{{=URL('default', 'shared_notes')}}">Shared Notes</a></li>
+						<li><a href="{{=URL('default', 'add_note')}}">Add Note</a></li>
+						<li><a href="user/register">Account Details</a></li>
+						<li><a href="http://127.0.0.1:8000/NotesKeeper3/default/user/logout?_next=/NotesKeeper3/default/index">Log out</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div id="main">
+			<div class="container">
+				<div class="row">
+					<div id="content" class="12u skel-cell-important">
+						<section>
+							<header>
+								<h2>Our Newest feature straight outta the labs</h2>
+								<span class="byline">Something new</span>
+							</header>
+							<a href="#" class="image full"><img src="{{=URL('static', 'images1/pic07.jpg')}}" alt="" /></a>
+							<p>Because we are social and we need to collaborate. NotesKeeper brings you this new feature of sharing your notes with your friends. Below are the notes which <strong>YOUR</strong> friends decided to share with you. Go ahead and explore. And do let us know what you think about it.</p>
+							<p>The NotesKeeper team</p>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="featured">
+			<div class="container">
+				<div>
+				<h2>Shared Tables Information</h2>
+						<table class="table">
+  							<tr class="active">
+    							<th style="padding-left = 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">Title</th>
+    							<th style="padding-left = 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">Labels</th>
+   								<th style="padding-left = 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">Created On</th>
+								<th style="padding-left = 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">Created By</th>
+							</tr>
+  							{{for row in rows:}}
+  								{{nt = db.note(row.note_id)}}
+  							<tr>
+    							<td style="padding-left = 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;"><a href="">{{=nt.title}}</a></td>
+    							<td style="padding-left = 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">
+      								{{labels = db(db.label.note_id == nt.id).select()}}
+      								{{for tag in labels:}}
+      								<span>{{=tag.name}}</span>
+   									{{pass}}
+    							</td>
+    							<td style="padding-left = 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">{{=nt.created_on}}</td>
+    							<td style="padding-left = 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">{{=nt.created_by.first_name}} {{=nt.created_by.last_name}}</td>
+  							</tr>
+							{{pass}}
+						</table>
+					</div>
+			</div>
+		</div>
+		<div id="copyright">
+			<div class="container">
+				<div class="copyright">
+					<p>Design: <a href="#">NotesKeeper</a> </p>
+					<ul class="icons">
+						<li><a href="https://www.facebook.com/sen.anubhab" class="fa fa-facebook"><span>Facebook</span></a></li>
+						<li><a href="https://www.twitter.com/itsanubhabsen" class="fa fa-twitter"><span>Twitter</span></a></li>
+						<li><a href="https://www.github.com/anubhabsen" class="fa fa-github"><span>GitHub</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
